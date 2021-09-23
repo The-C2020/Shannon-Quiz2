@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(53, 221, 34, 1) 0%,
+    rgba(241, 230, 158, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.sortContainer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.sortBy {
+  font-size: 2rem;
+}
+
+.sortables-option {
+  font-size: 3rem;
+  margin-top: 0.5rem;
+  cursor: grab;
+}
+
+.check-button {
+  cursor: pointer;
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 3rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}

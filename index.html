@@ -5,8 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="index.js"></script>
   </head>
   <body>
-    Test
+    <div class="sortContainer">
+      <div class="sortBy" id="upper">Anfang</div>
+      <div class="sortables">
+        <div draggable="true" class="sortables-option draggable">Content1</div>
+        <div draggable="true" class="sortables-option draggable">Content2</div>
+        <div draggable="true" class="sortables-option draggable">Content3</div>
+        <div draggable="true" class="sortables-option draggable">Content4</div>
+        <div draggable="true" class="sortables-option draggable">Content5</div>
+        <div draggable="true" class="sortables-option draggable">Content6</div>
+      </div>
+      <div class="sortBy" id="lower">Ende</div>
+    </div>
+    <button class="check-button" type="button">Prüfen</button>
   </body>
 </html>
+
+<!-- <div class="sort-box">
+      <div class="sortContainerContainer">
+        <div class="sortContainer1"></div>
+        <div class="secondContainer">
+          <div class="sortBy" id="upper">Anfang</div>
+          <div class="sortContainer2"></div>
+          <div class="sortBy" id="lower">Ende</div>
+        </div>
+      </div>
+    </div> -->
