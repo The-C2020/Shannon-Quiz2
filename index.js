@@ -15,7 +15,6 @@ function getDraggables() {
     e.preventDefault();
     const afterElement = getDragAfterElement(sortContainer, e.clientY);
     const draggable = document.querySelector(".dragging");
-    console.log(afterElement);
     if (afterElement == null) {
       sortContainer.appendChild(draggable);
     } else {
@@ -43,17 +42,18 @@ function getDraggables() {
   }
 }
 
-getDraggables();
+const check = (solC, solW) => {
+  document.querySelector(`.solution-box__${solC}`).classList.remove("hidden");
+  document.querySelector(`.solution-box__${solW}`).classList.add("hidden");
+};
 
-// sortContainers2.forEach((container) => {
-//   container.addEventListener("dragover", (e) => {
-//     e.preventDefault();
-//     const afterElement = getDragAfterElement(container, e.clientY);
-//     const draggable = document.querySelector(".dragging");
-//     if (afterElement == null) {
-//       container.appendChild(draggable);
-//     } else {
-//       container.insertBefore(draggable, afterElement);
-//     }
-//   });
-// });
+document.querySelector(".check-button").addEventListener("click", () => {
+  const sortables = [...document.querySelectorAll(".sortables-option")];
+  sortables.every(
+    (x, i) => i === 0 || x.dataset.order >= sortables[i - 1].dataset.order
+  )
+    ? check("correct", "wrong")
+    : check("wrong", "correct");
+});
+
+getDraggables();

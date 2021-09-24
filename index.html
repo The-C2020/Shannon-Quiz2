@@ -13,29 +13,37 @@
     <script defer src="index.js"></script>
   </head>
   <body>
+    <h1>Baue Deinen eigenen Algorithmus</h1>
     <div class="sortContainer">
       <div class="sortBy" id="upper">Anfang</div>
       <div class="sortables">
-        <div draggable="true" class="sortables-option draggable">Content1</div>
-        <div draggable="true" class="sortables-option draggable">Content2</div>
-        <div draggable="true" class="sortables-option draggable">Content3</div>
-        <div draggable="true" class="sortables-option draggable">Content4</div>
-        <div draggable="true" class="sortables-option draggable">Content5</div>
-        <div draggable="true" class="sortables-option draggable">Content6</div>
+        <div data-order="1" draggable="true" class="sortables-option draggable">
+          Content1
+        </div>
+        <div data-order="2" draggable="true" class="sortables-option draggable">
+          Content2
+        </div>
+        <div data-order="3" draggable="true" class="sortables-option draggable">
+          Content3
+        </div>
+        <div data-order="4" draggable="true" class="sortables-option draggable">
+          Content4
+        </div>
+        <div data-order="5" draggable="true" class="sortables-option draggable">
+          Content5
+        </div>
+        <div data-order="6" draggable="true" class="sortables-option draggable">
+          Content6
+        </div>
       </div>
       <div class="sortBy" id="lower">Ende</div>
     </div>
     <button class="check-button" type="button">Prüfen</button>
+    <div class="solution-box">
+      <div class="solution-box__correct hidden">
+        &#10004; Richtig! Sehr gut.
+      </div>
+      <div class="solution-box__wrong hidden">&#x2717; Leider Falsch!</div>
+    </div>
   </body>
 </html>
-
-<!-- <div class="sort-box">
-      <div class="sortContainerContainer">
-        <div class="sortContainer1"></div>
-        <div class="secondContainer">
-          <div class="sortBy" id="upper">Anfang</div>
-          <div class="sortContainer2"></div>
-          <div class="sortBy" id="lower">Ende</div>
-        </div>
-      </div>
-    </div> -->
