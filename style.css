@@ -20,6 +20,65 @@ h1 {
   font-size: 2.5rem;
 }
 
+input[type="radio"] {
+  float: left;
+}
+
+label {
+  margin-left: 30px;
+  display: block;
+}
+
+.container {
+  background-color: white;
+  width: 60%;
+  text-align: center;
+  border-radius: 10px;
+  padding: 1rem;
+  border-top: 0.75rem solid #ff0000;
+  margin: 1rem;
+}
+
+.quiz-container {
+  padding: 0 0 1rem 0;
+}
+
+.quiz-container__question-number {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  padding-left: 2rem;
+  text-align: left;
+  background-color: orange;
+}
+
+.quiz-container__question,
+.quiz-container__question-options {
+  text-align: left;
+  padding-left: 2rem;
+  margin: 1rem auto;
+}
+.quiz-container__question-option {
+  padding: 1rem 0;
+}
+
+.btns {
+  display: inline-block;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  padding: 0.5rem 1.5rem;
+  float: left;
+}
+
 .sortContainer {
   text-align: center;
   display: flex;
@@ -72,6 +131,22 @@ h1 {
 }
 
 .solution-box__wrong {
+  color: red;
+}
+
+.correct-answer {
+  background-color: lightgreen;
+}
+
+.wrong-answer {
+  background-color: lightsalmon;
+}
+
+.sort-box__correct {
+  color: green;
+}
+
+.sort-box__wrong {
   color: red;
 }
 

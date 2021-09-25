@@ -13,8 +13,122 @@
     <script defer src="index.js"></script>
   </head>
   <body>
-    <h1>Baue Deinen eigenen Algorithmus</h1>
-    <div class="sortContainer">
+    <section class="container quiz-container hidden">
+      <div class="quiz-container__question-number">
+        <strong>Frage:</strong>
+      </div>
+      <div class="quiz-container__question">Ein Algorithmus ist...</div>
+      <hr />
+      <div class="quiz-container__question-options">
+        <div class="quiz-container__question-option">
+          <input
+            class="question-1"
+            type="radio"
+            name="question1"
+            data-solution="wrong"
+          /><label
+            >... eine Schritt-für-Schritt-Anleitung zur Lösung von
+            Computer-Problemen.</label
+          >
+        </div>
+        <div class="quiz-container__question-option">
+          <input
+            class="question-1"
+            type="radio"
+            name="question1"
+            data-solution="wrong"
+          /><label>... eine künstliche Intelligenz.</label>
+        </div>
+        <div class="quiz-container__question-option">
+          <input
+            class="question-1"
+            type="radio"
+            name="question1"
+            data-solution="correct"
+          /><label
+            >... eine Schritt-für-Schritt-Anleitung zur Lösung von Aufgaben oder
+            Problemen.</label
+          >
+        </div>
+        <div class="quiz-container__question-option">
+          <input
+            class="question-1"
+            type="radio"
+            name="question1"
+            data-solution="wrong"
+          /><label>... ein bestimmter musikalischer Rhythmus.</label>
+        </div>
+      </div>
+      <div class="btns">
+        <button class="btn">Beantworten</button>
+      </div>
+
+      <div class="solution-box">
+        <div class="solution-box__correct hidden">
+          &#10004; Richtig! Sehr gut.
+        </div>
+        <div class="solution-box__wrong hidden">&#x2717; Leider Falsch!</div>
+      </div>
+    </section>
+    <section class="container quiz-container hidden">
+      <div class="quiz-container__question-number">
+        <strong>Frage:</strong>
+      </div>
+      <div class="quiz-container__question">
+        Wieso benötigen Computer ganz genaue Algorithmen?
+      </div>
+      <hr />
+      <div class="quiz-container__question-options">
+        <div class="quiz-container__question-option">
+          <input
+            class="question-2"
+            type="radio"
+            name="question2"
+            data-solution="wrong"
+          /><label>Das wurde in der Vergangenheit gesetzlich bestimmt.</label>
+        </div>
+        <div class="quiz-container__question-option">
+          <input
+            class="question-2"
+            type="radio"
+            name="question2"
+            data-solution="wrong"
+          /><label>Ohne sie würde der Computer nicht funktionieren.</label>
+        </div>
+        <div class="quiz-container__question-option">
+          <input
+            class="question-2"
+            type="radio"
+            name="question2"
+            data-solution="wrong"
+          /><label>Es ist egal, wie genau die Algorithmen sind.</label>
+        </div>
+        <div class="quiz-container__question-option">
+          <input
+            class="question-2"
+            type="radio"
+            name="question2"
+            data-solution="correct"
+          /><label
+            >Weil Computer genau das machen, was ihnen vorgeschrieben wird und
+            sie nicht interpretieren können.</label
+          >
+        </div>
+      </div>
+      <div class="btns">
+        <button class="btn">Beantworten</button>
+      </div>
+
+      <div class="solution-box">
+        <div class="solution-box__correct hidden">
+          &#10004; Richtig! Sehr gut.
+        </div>
+        <div class="solution-box__wrong hidden">&#x2717; Leider Falsch!</div>
+      </div>
+    </section>
+    <div class="sortContainer hidden">
+      <h1>Baue Deinen eigenen Algorithmus</h1>
+
       <div class="sortBy" id="upper">Anfang</div>
       <div class="sortables">
         <div data-order="1" draggable="true" class="sortables-option draggable">
@@ -37,13 +151,11 @@
         </div>
       </div>
       <div class="sortBy" id="lower">Ende</div>
-    </div>
-    <button class="check-button" type="button">Prüfen</button>
-    <div class="solution-box">
-      <div class="solution-box__correct hidden">
-        &#10004; Richtig! Sehr gut.
+      <button class="check-button" type="button">Prüfen</button>
+      <div class="solution-box">
+        <div class="sort-box__correct hidden">&#10004; Richtig! Sehr gut.</div>
+        <div class="sort-box__wrong hidden">&#x2717; Leider Falsch!</div>
       </div>
-      <div class="solution-box__wrong hidden">&#x2717; Leider Falsch!</div>
     </div>
   </body>
 </html>

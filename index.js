@@ -42,9 +42,17 @@ function getDraggables() {
   }
 }
 
+const questionAnswered = () => {
+  let allAnswers = document.querySelectorAll(`.question-${param}`);
+  for (let i = 0; i < allAnswers.length; i++) {
+    if (allAnswers[i].checked) return true;
+  }
+  return false;
+};
+
 const check = (solC, solW) => {
-  document.querySelector(`.solution-box__${solC}`).classList.remove("hidden");
-  document.querySelector(`.solution-box__${solW}`).classList.add("hidden");
+  document.querySelector(`.sort-box__${solC}`).classList.remove("hidden");
+  document.querySelector(`.sort-box__${solW}`).classList.add("hidden");
 };
 
 document.querySelector(".check-button").addEventListener("click", () => {
@@ -56,4 +64,36 @@ document.querySelector(".check-button").addEventListener("click", () => {
     : check("wrong", "correct");
 });
 
-getDraggables();
+document.querySelectorAll(".btn").forEach((button) => {
+  button.addEventListener("click", () => {
+    if (questionAnswered()) {
+      let allAnswers = document.querySelectorAll(`.question-${param}`);
+      allAnswers.forEach((item) => {
+        if (item.dataset.solution === "correct") {
+          item.parentElement.classList.add("correct-answer");
+          if (item.checked) {
+            document
+              .querySelectorAll(".solution-box__correct")
+              [param - 1].classList.remove("hidden");
+          } else {
+            document
+              .querySelectorAll(".solution-box__wrong")
+              [param - 1].classList.remove("hidden");
+          }
+        } else {
+          item.parentElement.classList.add("wrong-answer");
+        }
+      });
+    }
+  });
+});
+
+let param = new URLSearchParams(location.search).get("round");
+if (param == 3) {
+  getDraggables();
+  document.querySelector(".sortContainer").classList.remove("hidden");
+} else if (param == 1) {
+  document.querySelectorAll(".container")[0].classList.remove("hidden");
+} else if (param == 2) {
+  document.querySelectorAll(".container")[1].classList.remove("hidden");
+}
