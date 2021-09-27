@@ -15,11 +15,6 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-h1 {
-  margin-top: 1rem;
-  font-size: 2.5rem;
-}
-
 input[type="radio"] {
   float: left;
 }
@@ -27,6 +22,16 @@ input[type="radio"] {
 label {
   margin-left: 30px;
   display: block;
+}
+
+.head-text {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  width: 75%;
+  text-align: left;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .container {
@@ -74,9 +79,22 @@ label {
   border: none;
   border-radius: 5px;
   font-size: 1.5rem;
-  margin-left: 2rem;
   padding: 0.5rem 1.5rem;
+}
+
+.again-btn {
+  background-color: orange;
+  margin-top: 1rem;
+}
+
+.answer-btn {
   float: left;
+  margin-left: 2rem;
+}
+
+.check-btn {
+  background-color: darkgreen;
+  margin-top: 1rem;
 }
 
 .sortContainer {
@@ -96,34 +114,47 @@ label {
 }
 
 .sortables-option {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-top: 0.5rem;
   cursor: grab;
-}
-
-.sortables-option:hover {
-  color: white;
-  background-color: green;
+  border: 1px solid white;
   border-radius: 10px;
+  padding: 0.5rem;
+  transition: transform 0.3s;
 }
 
-.check-button {
-  cursor: pointer;
-  background-color: darkgreen;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 3rem;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
+.sortables-option:nth-child(1) {
+  background-color: #fff7c4;
+}
+.sortables-option:nth-child(2) {
+  background-color: #f1e69e;
+}
+.sortables-option:nth-child(3) {
+  background-color: #d3e58b;
+}
+.sortables-option:nth-child(4) {
+  background-color: #b5e377;
+}
+.sortables-option:nth-child(5) {
+  background-color: #7be050;
+}
+.sortables-option:nth-child(6) {
+  background-color: #63df40;
+}
+.sortables-option:nth-child(7) {
+  background-color: #4cde31;
+}
+.sortables-option:nth-child(8) {
+  background-color: #35dd22;
 }
 
 .solution-box {
   display: block;
   text-align: left;
-  font-size: 3rem;
+  font-size: 2rem;
   padding-left: 2rem;
   margin: 1rem auto;
+  text-align: center;
 }
 
 .solution-box__correct {
@@ -131,6 +162,9 @@ label {
 }
 
 .solution-box__wrong {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   color: red;
 }
 
@@ -152,4 +186,13 @@ label {
 
 .hidden {
   display: none;
+}
+
+.dragging {
+  opacity: 1;
+  color: white;
+}
+
+.highlighted:hover {
+  transform: translateY(-0.5rem) scale(1.05);
 }

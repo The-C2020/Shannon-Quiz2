@@ -1,13 +1,17 @@
+let answered = false;
+
 function getDraggables() {
   const draggables = document.querySelectorAll(".draggable");
   const sortContainer = document.querySelector(".sortables");
   draggables.forEach((draggable) => {
     draggable.addEventListener("dragstart", () => {
       draggable.classList.add("dragging");
+      draggables.forEach((el) => el.classList.remove("highlighted"));
     });
 
     draggable.addEventListener("dragend", () => {
       draggable.classList.remove("dragging");
+      draggables.forEach((el) => el.classList.add("highlighted"));
     });
   });
 
@@ -55,7 +59,7 @@ const check = (solC, solW) => {
   document.querySelector(`.sort-box__${solW}`).classList.add("hidden");
 };
 
-document.querySelector(".check-button").addEventListener("click", () => {
+document.querySelector(".check-btn").addEventListener("click", () => {
   const sortables = [...document.querySelectorAll(".sortables-option")];
   sortables.every(
     (x, i) => i === 0 || x.dataset.order >= sortables[i - 1].dataset.order
@@ -64,27 +68,33 @@ document.querySelector(".check-button").addEventListener("click", () => {
     : check("wrong", "correct");
 });
 
-document.querySelectorAll(".btn").forEach((button) => {
+document
+  .querySelectorAll(".again-btn")
+  .forEach((button) =>
+    button.addEventListener("click", () => location.reload())
+  );
+
+document.querySelectorAll(".answer-btn").forEach((button) => {
   button.addEventListener("click", () => {
-    if (questionAnswered()) {
-      let allAnswers = document.querySelectorAll(`.question-${param}`);
-      allAnswers.forEach((item) => {
-        if (item.dataset.solution === "correct") {
-          item.parentElement.classList.add("correct-answer");
-          if (item.checked) {
-            document
-              .querySelectorAll(".solution-box__correct")
-              [param - 1].classList.remove("hidden");
-          } else {
-            document
-              .querySelectorAll(".solution-box__wrong")
-              [param - 1].classList.remove("hidden");
-          }
+    if (!questionAnswered() || answered) return;
+    let allAnswers = document.querySelectorAll(`.question-${param}`);
+    allAnswers.forEach((item) => {
+      if (item.dataset.solution === "correct") {
+        answered = true;
+        item.parentElement.classList.add("correct-answer");
+        if (item.checked) {
+          document
+            .querySelectorAll(".solution-box__correct")
+            [param - 1].classList.remove("hidden");
         } else {
-          item.parentElement.classList.add("wrong-answer");
+          document
+            .querySelectorAll(".solution-box__wrong")
+            [param - 1].classList.remove("hidden");
         }
-      });
-    }
+      } else {
+        item.parentElement.classList.add("wrong-answer");
+      }
+    });
   });
 });
 

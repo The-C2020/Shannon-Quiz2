@@ -60,14 +60,17 @@
         </div>
       </div>
       <div class="btns">
-        <button class="btn">Beantworten</button>
+        <button class="btn answer-btn">Beantworten</button>
       </div>
 
       <div class="solution-box">
         <div class="solution-box__correct hidden">
           &#10004; Richtig! Sehr gut.
         </div>
-        <div class="solution-box__wrong hidden">&#x2717; Leider Falsch!</div>
+        <div class="solution-box__wrong hidden">
+          &#x2717; Leider Falsch!
+          <button class="btn again-btn">Noch einmal probieren</button>
+        </div>
       </div>
     </section>
     <section class="container quiz-container hidden">
@@ -116,45 +119,95 @@
         </div>
       </div>
       <div class="btns">
-        <button class="btn">Beantworten</button>
+        <button class="btn answer-btn">Beantworten</button>
       </div>
 
       <div class="solution-box">
         <div class="solution-box__correct hidden">
           &#10004; Richtig! Sehr gut.
         </div>
-        <div class="solution-box__wrong hidden">&#x2717; Leider Falsch!</div>
+        <div class="solution-box__wrong hidden">
+          &#x2717; Leider Falsch!
+          <button class="btn again-btn">Noch einmal probieren</button>
+        </div>
       </div>
     </section>
     <div class="sortContainer hidden">
-      <h1>Baue Deinen eigenen Algorithmus</h1>
-
+      <p class="head-text">
+        Da Du jetzt ungefähr weißt, was ein Algorithmus ist, kannst du dich
+        selbst an die Arbeit machen. Baue deinen eigenen
+        Hausarbeiten-Bearbeiten-Algorithmus. <br />
+        Wie ist die richtige Reihenfolge? Sortiere die Bausteine von
+        <br /><strong>oben = erster Schritt</strong> nach <br /><strong
+          >unten = letzter Schritt.</strong
+        >
+      </p>
       <div class="sortBy" id="upper">Anfang</div>
       <div class="sortables">
-        <div data-order="1" draggable="true" class="sortables-option draggable">
-          Content1
+        <div
+          data-order="3"
+          draggable="true"
+          class="sortables-option highlighted draggable"
+        >
+          Hausaufgaben auf den Tisch legen
         </div>
-        <div data-order="2" draggable="true" class="sortables-option draggable">
-          Content2
+        <div
+          data-order="7"
+          draggable="true"
+          class="sortables-option highlighted draggable"
+        >
+          Schulranzen mit zur Schule nehmen
         </div>
-        <div data-order="3" draggable="true" class="sortables-option draggable">
-          Content3
+        <div
+          data-order="4"
+          draggable="true"
+          class="sortables-option highlighted draggable"
+        >
+          Aufgaben lesen
         </div>
-        <div data-order="4" draggable="true" class="sortables-option draggable">
-          Content4
+        <div
+          data-order="2"
+          draggable="true"
+          class="sortables-option highlighted draggable"
+        >
+          Federtasche nehmen
         </div>
-        <div data-order="5" draggable="true" class="sortables-option draggable">
-          Content5
+        <div
+          data-order="8"
+          draggable="true"
+          class="sortables-option highlighted draggable"
+        >
+          Hausaufgaben bei Lehrer/in abgeben
         </div>
-        <div data-order="6" draggable="true" class="sortables-option draggable">
-          Content6
+        <div
+          data-order="5"
+          draggable="true"
+          class="sortables-option highlighted draggable"
+        >
+          Aufgabe bearbeiten
+        </div>
+        <div
+          data-order="6"
+          draggable="true"
+          class="sortables-option highlighted draggable"
+        >
+          Hausaufgaben einpacken
+        </div>
+        <div
+          data-order="1"
+          draggable="true"
+          class="sortables-option highlighted draggable"
+        >
+          Schulranzen auspacken
         </div>
       </div>
       <div class="sortBy" id="lower">Ende</div>
-      <button class="check-button" type="button">Prüfen</button>
+      <button class="btn check-btn" type="button">Prüfen</button>
       <div class="solution-box">
         <div class="sort-box__correct hidden">&#10004; Richtig! Sehr gut.</div>
-        <div class="sort-box__wrong hidden">&#x2717; Leider Falsch!</div>
+        <div class="sort-box__wrong hidden">
+          &#x2717; Leider Falsch! Probiere einmal eine andere Reihenfolge.
+        </div>
       </div>
     </div>
   </body>
