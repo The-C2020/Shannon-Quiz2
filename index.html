@@ -134,7 +134,7 @@
     </section>
     <div class="sortContainer hidden">
       <p class="head-text">
-        Da Du jetzt ungefähr weißt, was ein Algorithmus ist, kannst du dich
+        Da du jetzt ungefähr weißt, was ein Algorithmus ist, kannst du dich
         selbst an die Arbeit machen. Baue deinen eigenen
         Hausarbeiten-Bearbeiten-Algorithmus. <br />
         Wie ist die richtige Reihenfolge? Sortiere die Bausteine von
@@ -145,49 +145,42 @@
       <div class="sortBy" id="upper">Anfang</div>
       <div class="sortables">
         <div
-          data-order="3"
+          data-order="2"
           draggable="true"
           class="sortables-option highlighted draggable"
         >
           Hausaufgaben auf den Tisch legen
         </div>
         <div
-          data-order="7"
+          data-order="6"
           draggable="true"
           class="sortables-option highlighted draggable"
         >
           Schulranzen mit zur Schule nehmen
         </div>
         <div
-          data-order="4"
+          data-order="3"
           draggable="true"
           class="sortables-option highlighted draggable"
         >
           Aufgaben lesen
         </div>
         <div
-          data-order="2"
-          draggable="true"
-          class="sortables-option highlighted draggable"
-        >
-          Federtasche nehmen
-        </div>
-        <div
-          data-order="8"
+          data-order="7"
           draggable="true"
           class="sortables-option highlighted draggable"
         >
           Hausaufgaben bei Lehrer/in abgeben
         </div>
         <div
-          data-order="5"
+          data-order="4"
           draggable="true"
           class="sortables-option highlighted draggable"
         >
           Aufgabe bearbeiten
         </div>
         <div
-          data-order="6"
+          data-order="5"
           draggable="true"
           class="sortables-option highlighted draggable"
         >
@@ -203,10 +196,15 @@
       </div>
       <div class="sortBy" id="lower">Ende</div>
       <button class="btn check-btn" type="button">Prüfen</button>
-      <div class="solution-box">
-        <div class="sort-box__correct hidden">&#10004; Richtig! Sehr gut.</div>
-        <div class="sort-box__wrong hidden">
-          &#x2717; Leider Falsch! Probiere einmal eine andere Reihenfolge.
+      <div class="popup" id="popup">
+        <div class="popup_content">
+          <button id="close">&times;</button>
+          <div class="sort-box__correct hidden">
+            &#10004; Richtig! Sehr gut.
+          </div>
+          <div class="sort-box__wrong">
+            &#x2717; Leider Falsch! Probiere einmal eine andere Reihenfolge.
+          </div>
         </div>
       </div>
     </div>

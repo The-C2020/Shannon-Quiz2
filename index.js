@@ -60,12 +60,17 @@ const check = (solC, solW) => {
 };
 
 document.querySelector(".check-btn").addEventListener("click", () => {
+  document.querySelector(".popup").classList.add("popup-active");
   const sortables = [...document.querySelectorAll(".sortables-option")];
   sortables.every(
     (x, i) => i === 0 || x.dataset.order >= sortables[i - 1].dataset.order
   )
     ? check("correct", "wrong")
     : check("wrong", "correct");
+});
+
+document.querySelector("#close").addEventListener("click", () => {
+  document.querySelector(".popup").classList.remove("popup-active");
 });
 
 document

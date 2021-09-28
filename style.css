@@ -3,11 +3,7 @@
 }
 
 body {
-  background: linear-gradient(
-    90deg,
-    rgba(53, 221, 34, 1) 0%,
-    rgba(241, 230, 158, 1) 100%
-  );
+  background: #ff0000;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -78,7 +74,7 @@ label {
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 0.5rem 1.5rem;
 }
 
@@ -93,7 +89,7 @@ label {
 }
 
 .check-btn {
-  background-color: darkgreen;
+  background-color: darkred;
   margin-top: 1rem;
 }
 
@@ -107,10 +103,10 @@ label {
 }
 
 .sortBy {
-  font-size: 2rem;
+  font-size: 1.25rem;
+  color: white;
   margin: 0.75rem 0;
   padding: 0.25rem 1rem;
-  border: 1px solid green;
 }
 
 .sortables-option {
@@ -123,29 +119,9 @@ label {
   transition: transform 0.3s;
 }
 
-.sortables-option:nth-child(1) {
-  background-color: #fff7c4;
-}
-.sortables-option:nth-child(2) {
-  background-color: #f1e69e;
-}
-.sortables-option:nth-child(3) {
-  background-color: #d3e58b;
-}
-.sortables-option:nth-child(4) {
-  background-color: #b5e377;
-}
-.sortables-option:nth-child(5) {
-  background-color: #7be050;
-}
-.sortables-option:nth-child(6) {
-  background-color: #63df40;
-}
-.sortables-option:nth-child(7) {
-  background-color: #4cde31;
-}
-.sortables-option:nth-child(8) {
-  background-color: #35dd22;
+.sortables-option {
+  background-color: white;
+  font-weight: 600;
 }
 
 .solution-box {
@@ -190,9 +166,61 @@ label {
 
 .dragging {
   opacity: 1;
-  color: white;
+  color: orange;
 }
 
 .highlighted:hover {
   transform: translateY(-0.5rem) scale(1.05);
+}
+
+.darken {
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  opacity: 1;
+  visibility: hidden;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popup-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup_content {
+  width: 35%;
+  font-size: 2rem;
+  padding: 3rem 1rem;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#close {
+  cursor: pointer;
+  background-color: whitesmoke;
+  border-radius: 3px;
+  font-size: 2rem;
+  padding: 0 0.5rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
