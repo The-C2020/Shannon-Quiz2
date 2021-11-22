@@ -82,6 +82,7 @@ document
 document.querySelectorAll(".answer-btn").forEach((button) => {
   button.addEventListener("click", () => {
     if (!questionAnswered() || answered) return;
+    button.classList.add("hidden");
     let allAnswers = document.querySelectorAll(`.question-${param}`);
     allAnswers.forEach((item) => {
       if (item.dataset.solution === "correct") {
