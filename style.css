@@ -13,11 +13,14 @@ body {
 
 input[type="radio"] {
   float: left;
+  margin-top: 5px;
+  margin-right: 20px;
 }
 
 label {
   margin-left: 30px;
   display: block;
+  padding: 1rem 0;
 }
 
 .head-text {
@@ -59,8 +62,9 @@ label {
   padding-left: 2rem;
   margin: 1rem auto;
 }
-.quiz-container__question-option {
-  padding: 1rem 0;
+
+.quiz-container__question-option:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .btns {
